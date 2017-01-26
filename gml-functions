@@ -26,20 +26,23 @@ GearGOD, roach, RhysAndrews, Bendodge, javaman1922, h0bbel, evilish, Natso, Mike
 --abs
 x
 
+alarm_get
+index
+
+alarm_set
+index,value
+
 arccos
 x
 
 arcsin
 x
 
-arctan2
-y,x
-
 arctan
 x
 
-background_add_alpha
-fname,preload
+arctan2
+y,x
 
 background_add
 fname,transparent,smooth,preload
@@ -49,9 +52,6 @@ ind,back
 
 background_create_color
 w,h,col,preload
-
-background_create_from_screen
-x,y,w,h,transparent,smooth,preload
 
 background_create_from_surface
 id,x,y,w,h,transparent,smooth,preload
@@ -74,23 +74,11 @@ ind
 background_get_name
 ind
 
-background_get_preload
-ind
-
-background_get_smooth
-ind
-
 background_get_texture
 back
 
-background_get_transparent
-ind
-
 background_get_width
 ind
-
-background_replace_alpha
-ind,fname,preload
 
 background_replace
 ind,fname,transparent,smooth,preload
@@ -100,60 +88,6 @@ ind,fname
 
 background_set_alpha_from_background
 ind,back
-
-cd_close_door
-none
-
-cd_init
-none
-
-cd_length
-none
-
-cd_number
-none
-
-cd_open_door
-none
-
-cd_paused
-none
-
-cd_pause
-none
-
-cd_playing
-none
-
-cd_play
-first,last
-
-cd_position
-none
-
-cd_present
-none
-
-cd_resume
-none
-
-cd_set_position
-pos
-
-cd_set_track_position
-pos
-
-cd_stop
-none
-
-cd_track_length
-n
-
-cd_track_position
-none
-
-cd_track
-none
 
 ceil
 x
@@ -228,7 +162,7 @@ d3d_draw_wall
 x1,y1,z1,x2,y2,z2,texid,hrepeat,vrepeat
 
 d3d_end
-
+none
 
 d3d_light_define_direction
 ind,dx,dy,dz,col
@@ -272,44 +206,44 @@ ind,fname
 d3d_model_primitive_begin
 ind,kind
 
+d3d_model_primitive_end
+ind
+
 d3d_model_save
 ind,fname
-
-d3d_model_vertex_color
-ind,x,y,z,col,alpha
-
-d3d_model_vertex_normal_color
-ind,x,y,z,nx,ny,nz,col,alpha
-
-d3d_model_vertex_normal_texture_color
-ind,x,y,z,nx,ny,nz,xtex,ytex,col,alpha
-
-d3d_model_vertex_normal_texture
-ind,x,y,z,nx,ny,nz,xtex,ytex
-
-d3d_model_vertex_normal
-ind,x,y,z,nx,ny,nz
-
-d3d_model_vertex_texture_color
-ind,x,y,z,xtex,ytex,col,alpha
-
-d3d_model_vertex_texture
-ind,x,y,z,xtex,ytex
 
 d3d_model_vertex
 ind,x,y,z
 
+d3d_model_vertex_color
+ind,x,y,z,col,alpha
+
+d3d_model_vertex_normal
+ind,x,y,z,nx,ny,nz
+
+d3d_model_vertex_normal_color
+ind,x,y,z,nx,ny,nz,col,alpha
+
+d3d_model_vertex_normal_texture
+ind,x,y,z,nx,ny,nz,xtex,ytex
+
+d3d_model_vertex_normal_texture_color
+ind,x,y,z,nx,ny,nz,xtex,ytex,col,alpha
+
+d3d_model_vertex_texture
+ind,x,y,z,xtex,ytex
+
+d3d_model_vertex_texture_color
+ind,x,y,z,xtex,ytex,col,alpha
+
 d3d_model_wall
 ind,x1,y1,z1,x2,y2,z2,hrepeat,vrepeat
-
-d3d_primitive_begin_texture
-kind,texid
 
 d3d_primitive_begin
 kind
 
-d3d_primitive_end
-none
+d3d_primitive_begin_texture
+kind,texid
 
 d3d_primitive_end
 none
@@ -332,6 +266,9 @@ enable
 d3d_set_perspective
 enable
 
+d3d_set_projection
+xfrom,yfrom,zfrom,xto,yto,zto,xup,yup,zup
+
 d3d_set_projection_ext
 xfrom,yfrom,zfrom,xto,yto,zto,xup,yup,zup,angle,aspect,znear,zfar
 
@@ -340,9 +277,6 @@ x,y,w,h,angle
 
 d3d_set_projection_perspective
 x,y,w,h,angle
-
-d3d_set_projection
-xfrom,yfrom,zfrom,xto,yto,zto,xup,yup,zup
 
 d3d_set_shading
 smooth
@@ -407,34 +341,34 @@ none
 d3d_transform_stack_top
 none
 
+d3d_vertex
+x,y,z
+
 d3d_vertex_color
 x,y,z,col,alpha
 
-d3d_vertex_normal(x,y,z,nx,ny,nz) Add vertex
-x,y,z
+d3d_vertex_normal
+x,y,z,nx,ny,nz
 
 d3d_vertex_normal_color
 x,y,z,nx,ny,nz,col,alpha
 
-d3d_vertex_normal_texture_color
-x,y,z,nx,ny,nz,xtex,ytex,col,alpha
-
 d3d_vertex_normal_texture
 x,y,z,nx,ny,nz,xtex,ytex
 
-d3d_vertex_texture_color
-x,y,z,xtex,ytex,col,alpha
+d3d_vertex_normal_texture_color
+x,y,z,nx,ny,nz,xtex,ytex,col,alpha
 
 d3d_vertex_texture
 x,y,z,xtex,ytex
 
-d3d_vertex
-x,y,z
-
-date_compare_datetime
-date1,date2
+d3d_vertex_texture_color
+x,y,z,xtex,ytex,col,alpha
 
 date_compare_date
+date1,date2
+
+date_compare_datetime
 date1,date2
 
 date_compare_time
@@ -443,23 +377,8 @@ date1,date2
 date_create_datetime
 year,month,day,hour,minute,second
 
-date_create_date
-year,month,day
-
-date_create_time
-hour,minute,second
-
 date_current_datetime
 none
-
-date_current_date
-none
-
-date_current_time
-none
-
-date_datetime_string
-date
 
 date_date_of
 date
@@ -467,46 +386,49 @@ date
 date_date_string
 date
 
+date_datetime_string
+date
+
+date_day_span
+date1,date2
+
 date_days_in_month
 date
 
 date_days_in_year
 date
 
-date_day_span
-date1,date2
-
-date_get_day_of_year
-date
-
 date_get_day
 date
 
-date_get_hour_of_year
+date_get_day_of_year
 date
 
 date_get_hour
 date
 
-date_get_minute_of_year
+date_get_hour_of_year
 date
 
 date_get_minute
 date
 
-date_get_month
+date_get_minute_of_year
 date
 
-date_get_second_of_year
+date_get_month
 date
 
 date_get_second
 date
 
-date_get_weekday
+date_get_second_of_year
 date
 
 date_get_week
+date
+
+date_get_weekday
 date
 
 date_get_year
@@ -560,12 +482,6 @@ date
 date_valid_datetime
 year,month,day,hour,minute,second
 
-date_valid_date
-year,month,day
-
-date_valid_time
-hour,minute,second
-
 date_week_span
 date1,date2
 
@@ -580,15 +496,6 @@ dname
 
 directory_exists
 dname
-
-discard_include_file
-fname
-
-display_get_colordepth
-none
-
-display_get_frequency
-none
 
 display_get_height
 none
@@ -608,21 +515,6 @@ x,y
 display_reset
 none
 
-display_set_all
-w,h,frequency,coldepth
-
-display_set_colordepth
-coldepth
-
-display_set_frequency
-frequency
-
-display_set_size
-w,h
-
-display_test_all
-w,h,frequency,coldepth
-
 distance_to_object
 obj
 
@@ -631,6 +523,9 @@ x,y
 
 draw_arrow
 x1,y1,x2,y2,size
+
+draw_background
+back,x,y
 
 draw_background_ext
 back,x,y,xscale,yscale,rot,color,alpha
@@ -644,44 +539,41 @@ back,left,top,width,height,x,y
 draw_background_part_ext
 back,left,top,width,height,x,y,xscale,yscale,color,alpha
 
-draw_background_stretched_ext
-back,x,y,w,h,color,alpha
-
 draw_background_stretched
 back,x,y,w,h
 
-draw_background_tiled_ext
-back,x,y,xscale,yscale,color,alpha
+draw_background_stretched_ext
+back,x,y,w,h,color,alpha
 
 draw_background_tiled
 back,x,y
 
-draw_background
-back,x,y
+draw_background_tiled_ext
+back,x,y,xscale,yscale,color,alpha
 
 draw_button
 x1,y1,x2,y2,up
 
-draw_circle_color
-x,y,r,col1,col2,outline
-
 draw_circle
 x,y,r,outline
 
-draw_clear_alpha
-col,alpha
+draw_circle_color
+x,y,r,col1,col2,outline
 
 draw_clear
 col
 
-draw_ellipse_color
-x1,y1,x2,y2,col1,col2,outline
+draw_clear_alpha
+col,alpha
 
 draw_ellipse
 x1,y1,x2,y2,outline
 
-draw_getpixel
-x,y
+draw_ellipse_color
+x1,y1,x2,y2,col1,col2,outline
+
+draw_enable_swf_aa
+enable
 
 draw_get_alpha
 none
@@ -689,65 +581,71 @@ none
 draw_get_color
 none
 
+draw_get_swf_aa_level
+none
+
+draw_getpixel
+x,y
+
 draw_healthbar
 x1,y1,x2,y2,amount,backcol,mincol,maxcol,direction,showback,showborder
 
 draw_highscore
 x1,y1,x2,y2
 
+draw_line
+x1,y1,x2,y2
+
 draw_line_color
 x1,y1,x2,y2,col1,col2
-
-draw_line_width_color
-x1,y1,x2,y2,w,col1,col2
 
 draw_line_width
 x1,y1,x2,y2,w
 
-draw_line
-x1,y1,x2,y2
+draw_line_width_color
+x1,y1,x2,y2,w,col1,col2
 
 draw_path
 path,x,y,absolute
 
-draw_point_color
-x,y,col1
-
 draw_point
 x,y
 
-draw_primitive_begin_texture
-kind,texid
+draw_point_color
+x,y,col1
 
 draw_primitive_begin
 kind
 
-draw_primitive_end
-none
+draw_primitive_begin_texture
+kind,texid
 
 draw_primitive_end
 none
+
+draw_rectangle
+x1,y1,x2,y2,outline
 
 draw_rectangle_color
 x1,y1,x2,y2,col1,col2,col3,col4,outline
 
-draw_rectangle
+draw_roundrect
 x1,y1,x2,y2,outline
 
 draw_roundrect_color
 x1,y1,x2,y2,col1,col2,outline
 
-draw_roundrect
-x1,y1,x2,y2,outline
+draw_self
+none
 
 draw_set_alpha
 alpha
 
-draw_set_blend_mode_ext
-src,dest
-
 draw_set_blend_mode
 mode
+
+draw_set_blend_mode_ext
+src,dest
 
 draw_set_circle_precision
 precision
@@ -761,8 +659,23 @@ font
 draw_set_halign
 halign
 
+draw_set_swf_aa_level
+AA
+
 draw_set_valign
 valign
+
+draw_skeleton
+sprite,animname,skinname,frame,x,y,xscale,yscale,rot,colour,alpha
+
+draw_skeleton_collision
+sprite,animname,frame,x,y,xscale,yscale,rot,colour
+
+draw_skeleton_time
+sprite,animname,skinname,time,x,y,xscale,yscale,rot,colour
+
+draw_sprite
+sprite,subimg,x,y
 
 draw_sprite_ext
 sprite,subimg,x,y,xscale,yscale,rot,color,alpha
@@ -770,26 +683,29 @@ sprite,subimg,x,y,xscale,yscale,rot,color,alpha
 draw_sprite_general
 sprite,subimg,left,top,width,height,x,y,xscale,yscale,rot,c1,c2,c3,c4,alpha
 
-draw_sprite_part_ext
-sprite,subimg,left,top,width,height,x,y,xscale,yscale,color,alpha
-
 draw_sprite_part
 sprite,subimg,left,top,width,height,x,y
 
-draw_sprite_stretched_ext
-sprite,subimg,x,y,w,h,color,alpha
+draw_sprite_part_ext
+sprite,subimg,left,top,width,height,x,y,xscale,yscale,color,alpha
+
+draw_sprite_pos
+sprite,subimg,x1,y1,x2,y2,x3,y3,x4,y4,alpha
 
 draw_sprite_stretched
 sprite,subimg,x,y,w,h
 
-draw_sprite_tiled_ext
-sprite,subimg,x,y,xscale,yscale,color,alpha
+draw_sprite_stretched_ext
+sprite,subimg,x,y,w,h,color,alpha
 
 draw_sprite_tiled
 sprite,subimg,x,y
 
-draw_sprite
-sprite,subimg,x,y
+draw_sprite_tiled_ext
+sprite,subimg,x,y,xscale,yscale,color,alpha
+
+draw_surface
+id,x,y
 
 draw_surface_ext
 id,x,y,xscale,yscale,rot,color,alpha
@@ -797,65 +713,68 @@ id,x,y,xscale,yscale,rot,color,alpha
 draw_surface_general
 id,left,top,width,height,x,y,xscale,yscale,rot,c1,c2,c3,c4,alpha
 
-draw_surface_part_ext
-id,left,top,width,height,x,y,xscale,yscale,color,alpha
-
 draw_surface_part
 id,left,top,width,height,x,y
 
-draw_surface_stretched_ext
-id,x,y,w,h,color,alpha
+draw_surface_part_ext
+id,left,top,width,height,x,y,xscale,yscale,color,alpha
 
 draw_surface_stretched
 id,x,y,w,h
 
-draw_surface_tiled_ext
-id,x,y,xscale,yscale,color,alpha
+draw_surface_stretched_ext
+id,x,y,w,h,color,alpha
 
 draw_surface_tiled
 id,x,y
 
-draw_text_color
-x,y,string,c1,c2,c3,c4,alpha
-
-draw_text_ext_color
-x,y,string,sep,w,c1,c2,c3,c4,alpha
-
-draw_text_ext_transformed_color
-x,y,string,sep,w,xscale,yscale,angle,c1,c2,c3,c4,alpha
-
-draw_text_ext_transformed
-x,y,string,sep,w,xscale,yscale,angle
-
-draw_text_ext
-x,y,string,sep,w
-
-draw_text_transformed_color
-x,y,string,xscale,yscale,angle,c1,c2,c3,c4,alpha
-
-draw_text_transformed
-x,y,string,xscale,yscale,angle
+draw_surface_tiled_ext
+id,x,y,xscale,yscale,color,alpha
 
 draw_text
 x,y,string
 
-draw_triangle_color
-x1,y1,x2,y2,x3,y3,col1,col2,col3,outline
+draw_text_color
+x,y,string,c1,c2,c3,c4,alpha
+
+draw_text_ext
+x,y,string,sep,w
+
+draw_text_ext_color
+x,y,string,sep,w,c1,c2,c3,c4,alpha
+
+draw_text_ext_transformed
+x,y,string,sep,w,xscale,yscale,angle
+
+draw_text_ext_transformed_color
+x,y,string,sep,w,xscale,yscale,angle,c1,c2,c3,c4,alpha
+
+draw_text_transformed
+x,y,string,xscale,yscale,angle
+
+draw_text_transformed_color
+x,y,string,xscale,yscale,angle,c1,c2,c3,c4,alpha
 
 draw_triangle
 x1,y1,x2,y2,x3,y3,outline
 
+draw_triangle_color
+x1,y1,x2,y2,x3,y3,col1,col2,col3,outline
+
+draw_vertex
+x,y
+
 draw_vertex_color
 x,y,col,alpha
-
-draw_vertex_texture_color
-x,y,xtex,ytex,col,alpha
 
 draw_vertex_texture
 x,y,xtex,ytex
 
-draw_vertex
-x,y
+draw_vertex_texture_color
+x,y,xtex,ytex,col,alpha
+
+ds_grid_add
+id,x,y,val
 
 ds_grid_add_disk
 id,xm,ym,r,val
@@ -865,9 +784,6 @@ id,source,x1,y1,x2,y2,xpos,ypos
 
 ds_grid_add_region
 id,x1,y1,x2,y2,val
-
-ds_grid_add
-id,x,y,val
 
 ds_grid_clear
 id,val
@@ -880,6 +796,9 @@ w,h
 
 ds_grid_destroy
 id
+
+ds_grid_get
+id,x,y
 
 ds_grid_get_disk_max
 id,xm,ym,r
@@ -905,11 +824,11 @@ id,x1,y1,x2,y2
 ds_grid_get_sum
 id,x1,y1,x2,y2
 
-ds_grid_get
-id,x,y
-
 ds_grid_height
 id
+
+ds_grid_multiply
+id,x,y,val
 
 ds_grid_multiply_disk
 id,xm,ym,r,val
@@ -920,14 +839,14 @@ id,source,x1,y1,x2,y2,xpos,ypos
 ds_grid_multiply_region
 id,x1,y1,x2,y2,val
 
-ds_grid_multiply
-id,x,y,val
-
 ds_grid_read
 id,str
 
 ds_grid_resize
 id,w,h
+
+ds_grid_set
+id,x,y,val
 
 ds_grid_set_disk
 id,xm,ym,r,val
@@ -937,9 +856,6 @@ id,source,x1,y1,x2,y2,xpos,ypos
 
 ds_grid_set_region
 id,x1,y1,x2,y2,val
-
-ds_grid_set
-id,x,y,val
 
 ds_grid_shuffle
 id
@@ -1151,6 +1067,9 @@ id
 ds_queue_write
 id
 
+ds_set_precision
+prec
+
 ds_stack_clear
 id
 
@@ -1185,7 +1104,7 @@ ds_stack_write
 id
 
 effect_clear
-
+none
 
 effect_create_above
 kind,x,y,size,color
@@ -1199,38 +1118,14 @@ name
 event_inherited
 none
 
-event_perform_object
-obj,type,numb
-
 event_perform
 type,numb
 
+event_perform_object
+obj,type,numb
+
 event_user
 numb
-
-execute_file
-fname
-
-execute_file
-fname,arg0,arg1,...
-
-execute_program
-prog,arg,wait
-
-execute_shell
-prog,arg
-
-execute_string
-str,arg0,arg1,...
-
-execute_string
-str,arg0,arg1,...
-
-export_include_file_location
-fname,location
-
-export_include_file
-fname
 
 exp
 x
@@ -1243,24 +1138,6 @@ dll,name,calltype,restype,argnumb,arg1type,arg2type, ...
 
 external_free
 dll
-
-filename_change_ext
-fname,newext
-
-filename_dir
-fname
-
-filename_drive
-fname
-
-filename_ext
-fname
-
-filename_name
-fname
-
-filename_path
-fname
 
 file_attributes
 fname,attr
@@ -1325,16 +1202,13 @@ fname
 file_text_open_write
 fname
 
-file_text_readln
-fileid
-
 file_text_read_real
 fileid
 
 file_text_read_string
 fileid
 
-file_text_writeln
+file_text_readln
 fileid
 
 file_text_write_real
@@ -1343,14 +1217,35 @@ fileid,x
 file_text_write_string
 fileid,str
 
+file_text_writeln
+fileid
+
+filename_change_ext
+fname,newext
+
+filename_dir
+fname
+
+filename_drive
+fname
+
+filename_ext
+fname
+
+filename_name
+fname
+
+filename_path
+fname
+
 floor
 x
 
-font_add_sprite
-spr,first,prop,sep
-
 font_add
 name,size,bold,italic,first,last
+
+font_add_sprite
+spr,first,prop,sep
 
 font_delete
 ind
@@ -1376,11 +1271,14 @@ ind
 font_get_name
 ind
 
-font_replace_sprite
-ind,spr,first,prop,sep
+font_get_size
+ind
 
 font_replace
 ind,name,size,bold,italic,first,last
+
+font_replace_sprite
+ind,spr,first,prop,sep
 
 frac
 x
@@ -1397,15 +1295,6 @@ none
 game_save
 string
 
-get_color
-defcol
-
-get_directory_alt
-capt,root
-
-get_directory
-dname
-
 get_integer
 str,def
 
@@ -1418,9 +1307,6 @@ filter,fname
 get_string
 str,def
 
-highscore_add_current
-none
-
 highscore_add
 str,numb
 
@@ -1429,27 +1315,6 @@ none
 
 highscore_name
 place
-
-highscore_set_background
-back
-
-highscore_set_border
-show
-
-highscore_set_colors
-back,new,other
-
-highscore_set_font
-name,size,style
-
-highscore_set_strings
-caption,nobody,escape
-
-highscore_show_ext
-numb,back,border,col1,col2,name,size
-
-highscore_show
-numb
 
 highscore_value
 place
@@ -1538,9 +1403,6 @@ x,y,obj
 io_clear
 none
 
-io_handle
-none
-
 is_real
 x
 
@@ -1589,6 +1451,9 @@ id
 joystick_zpos
 id
 
+keyboard_check
+key
+
 keyboard_check_direct
 key
 
@@ -1596,9 +1461,6 @@ keyboard_check_pressed
 key
 
 keyboard_check_released
-key
-
-keyboard_check
 key
 
 keyboard_clear
@@ -1623,9 +1485,6 @@ keyboard_set_numlock
 on
 
 keyboard_unset_map
-none
-
-keyboard_wait
 none
 
 lengthdir_x
@@ -1655,9 +1514,6 @@ red,green,blue
 max
 val1,val2,val3,...
 
-MCI_command
-str
-
 mean
 val1,val2,val3,...
 
@@ -1667,46 +1523,22 @@ val1,val2,val3,...
 merge_color
 col1,col2,amount
 
-message_alpha
-alpha
-
-message_button_font
-name,size,color,style
-
-message_button
-spr
-
-message_caption
-show,str
-
-message_input_color
-col
-
-message_input_font
-name,size,color,style
-
-message_mouse_color
-col
-
-message_position
-x,y
-
-message_size
-w,h
-
-message_text_font
-name,size,color,style
-
 min
 val1,val2,val3,...
+
+motion_add
+dir,speed
+
+motion_set
+dir,speed
+
+mouse_check_button
+numb
 
 mouse_check_button_pressed
 numb
 
 mouse_check_button_released
-numb
-
-mouse_check_button
 numb
 
 mouse_clear
@@ -1742,93 +1574,6 @@ x,y,sp
 move_wrap
 hor,vert,margin
 
-mplay_connect_status
-
-
-mplay_data_mode
-guar
-
-mplay_data_read
-ind
-
-mplay_data_write
-ind,val
-
-mplay_end
-
-
-mplay_init_ipx
-none
-
-mplay_init_modem
-initstr,phonenr
-
-mplay_init_serial
-portno,baudrate,stopbits,parity,flow
-
-mplay_init_tcpip
-addr
-
-mplay_ipaddress
-
-
-mplay_message_clear
-player
-
-mplay_message_count
-player
-
-mplay_message_id
-none
-
-mplay_message_name
-none
-
-mplay_message_player
-none
-
-mplay_message_receive
-player
-
-mplay_message_send_guaranteed
-player,id,val
-
-mplay_message_send
-player,id,val
-
-mplay_message_value
-none
-
-mplay_player_find
-none
-
-mplay_player_id
-numb
-
-mplay_player_name
-numb
-
-mplay_session_create
-sesname,playnumb,playername
-
-mplay_session_end
-none
-
-mplay_session_find
-none
-
-mplay_session_join
-numb,playername
-
-mplay_session_mode
-move
-
-mplay_session_name
-numb
-
-mplay_session_status
-none
-
 mp_grid_add_cell
 id,h,v
 
@@ -1859,41 +1604,32 @@ id
 mp_grid_path
 id,path,xstart,ystart,xgoal,ygoal,allowdiag
 
-mp_linear_path_object
-path,xg,yg,stepsize,obj
-
 mp_linear_path
 path,xg,yg,stepsize,checkall
+
+mp_linear_path_object
+path,xg,yg,stepsize,obj
 
 mp_linear_step
 x,y,stepsize,checkall
 
-mp_potential_path_object
-path,xg,yg,stepsize,factor,obj
+mp_linear_step_object
+xgoal,ygoal,stepsize,obj
 
 mp_potential_path
 path,xg,yg,stepsize,factor,checkall
 
+mp_potential_path_object
+path,xg,yg,stepsize,factor,obj
+
 mp_potential_settings
 maxrot,rotstep,ahead,onspot
-
-mp_potential_step_object
-x,y,stepsize,obj
 
 mp_potential_step
 x,y,stepsize,checkall
 
-object_add
-none
-
-object_delete
-ind
-
-object_event_add
-ind,evtype,evnumb,codestr
-
-object_event_clear
-ind,evtype,evnumb
+mp_potential_step_object
+x,y,stepsize,obj
 
 object_exists
 ind
@@ -1931,9 +1667,6 @@ ind,depth
 object_set_mask
 ind,spr
 
-object_set_parent
-ind,obj
-
 object_set_persistent
 ind,pers
 
@@ -1955,93 +1688,6 @@ none
 parameter_string
 n
 
-part_attractor_clear
-ps,ind
-
-part_attractor_create
-ps
-
-part_attractor_destroy_all
-ps
-
-part_attractor_destroy
-ps,ind
-
-part_attractor_exists
-ps,ind
-
-part_attractor_force
-ps,ind,force,dist,kind,aditive
-
-part_attractor_position
-ps,ind,x,y
-
-part_changer_clear
-ps,ind
-
-part_changer_create
-ps
-
-part_changer_destroy_all
-ps
-
-part_changer_destroy
-ps,ind
-
-part_changer_exists
-ps,ind
-
-part_changer_kind
-ps,ind,kind
-
-part_changer_region
-ps,ind,xmin,xmax,ymin,ymax,shape
-
-part_changer_types
-ps,ind,parttype1,parttype2
-
-part_deflector_clear
-ps,ind
-
-part_deflector_create
-ps
-
-part_deflector_destroy_all
-ps
-
-part_deflector_destroy
-ps,ind
-
-part_deflector_exists
-ps,ind
-
-part_deflector_friction
-ps,ind,friction
-
-part_deflector_kind
-ps,ind,kind
-
-part_deflector_region
-ps,ind,xmin,xmax,ymin,ymax
-
-part_destroyer_clear
-ps,ind
-
-part_destroyer_create
-ps
-
-part_destroyer_destroy_all
-ps
-
-part_destroyer_destroy
-ps,ind
-
-part_destroyer_exists
-ps,ind
-
-part_destroyer_region
-ps,ind,xmin,xmax,ymin,ymax,shape
-
 part_emitter_burst
 ps,ind,parttype,number
 
@@ -2051,11 +1697,11 @@ ps,ind
 part_emitter_create
 ps
 
-part_emitter_destroy_all
-ps
-
 part_emitter_destroy
 ps,ind
+
+part_emitter_destroy_all
+ps
 
 part_emitter_exists
 ps,ind
@@ -2072,11 +1718,11 @@ ind
 part_particles_count
 ind
 
-part_particles_create_color
-ind,x,y,parttype,color,number
-
 part_particles_create
 ind,x,y,parttype,number
+
+part_particles_create_color
+ind,x,y,parttype,color,number
 
 part_system_automatic_draw
 ind,automatic
@@ -2090,17 +1736,17 @@ ind
 part_system_create
 none
 
-part_system_depth Sets th
-ind,depth Sets th
+part_system_depth
+ind,depth
 
 part_system_destroy
 ind
 
-part_system_drawit
-ind
-
 part_system_draw_order
 ind,oldtonew
+
+part_system_drawit
+ind
 
 part_system_exists
 ind
@@ -2126,15 +1772,6 @@ ind,additive
 part_type_clear
 ind
 
-part_type_color1
-ind,color1
-
-part_type_color2
-ind,color1,color2
-
-part_type_color3
-ind,color1,color2,color3
-
 part_type_color_hsv
 ind,hmin,hmax,smin,smax,vmin,vmax
 
@@ -2143,6 +1780,15 @@ ind,color1,color2
 
 part_type_color_rgb
 ind,rmin,rmax,gmin,gmax,bmin,bmax
+
+part_type_color1
+ind,color1
+
+part_type_color2
+ind,color1,color2
+
+part_type_color3
+ind,color1,color2,color3
 
 part_type_create
 none
@@ -2186,11 +1832,11 @@ ind,sprite,animat,stretch,random
 part_type_step
 ind,step_number,step_type
 
-path_add_point
-ind,x,y,speed
-
 path_add
 none
+
+path_add_point
+ind,x,y,speed
 
 path_append
 ind,path
@@ -2204,11 +1850,11 @@ ind,n,x,y,speed
 path_clear_points
 ind
 
-path_delete_point
-ind,n
-
 path_delete
 ind
+
+path_delete_point
+ind,n
 
 path_duplicate
 ind
@@ -2324,53 +1970,23 @@ x,n
 radtodeg
 x
 
-randomize
-none
+random
+n
 
 random_get_seed
 none
 
+random_range
+n1,n2
+
 random_set_seed
 seed
 
-random
-x
+randomize
+none
 
 real
 str
-
-registry_exists_ext
-key,name
-
-registry_exists
-name
-
-registry_read_real_ext
-key,name
-
-registry_read_real
-name
-
-registry_read_string_ext
-key,name
-
-registry_read_string
-name
-
-registry_set_root
-root
-
-registry_write_real_ext
-key,name,x
-
-registry_write_real
-name,x
-
-registry_write_string_ext
-key,name,str
-
-registry_write_string
-name,str
 
 room_add
 none
@@ -2387,14 +2003,14 @@ ind
 room_get_name
 ind
 
+room_goto
+numb
+
 room_goto_next
 none
 
 room_goto_previous
 none
-
-room_goto
-numb
 
 room_instance_add
 ind,x,y,obj
@@ -2411,17 +2027,11 @@ numb
 room_restart
 none
 
-room_set_background_color
-ind,col,show
-
 room_set_background
 ind,bind,vis,fore,back,x,y,htiled,vtiled,hspeed,vspeed,alpha
 
-room_set_caption
-ind,str
-
-room_set_code
-ind,str
+room_set_background_color
+ind,col,show
 
 room_set_height
 ind,h
@@ -2429,20 +2039,20 @@ ind,h
 room_set_persistent
 ind,val
 
-room_set_view_enabled
-ind,val
-
 room_set_view
 ind,vind,vis,xview,yview,wview,hview,xport,yport,wport,hport,hborder,vborder,hspeed,vspeed,obj
+
+room_set_view_enabled
+ind,val
 
 room_set_width
 ind,w
 
-room_tile_add_ext
-ind,back,left,top,width,height,x,y,depth,xscale,yscale,alpha
-
 room_tile_add
 ind,back,left,top,width,height,x,y,depth
+
+room_tile_add_ext
+ind,back,left,top,width,height,x,y,depth,xscale,yscale,alpha
 
 room_tile_clear
 ind
@@ -2450,20 +2060,11 @@ ind
 round
 x
 
-screen_redraw
-none
-
-screen_refresh
-
-
-screen_save_part
-fname,x,y,w,h
-
 screen_save
 fname
 
-screen_wait_vsync
-none
+screen_save_part
+fname,x,y,w,h
 
 script_execute
 scr,arg0,arg1,...
@@ -2474,32 +2075,11 @@ ind
 script_get_name
 ind
 
-script_get_text
-ind
-
-set_automatic_draw
-value
-
-set_program_priority
-priority
-
-set_synchronization
-value
-
 show_debug_message
 str
 
 show_error
 str,abort
-
-show_menu_pos
-x,y,str,def
-
-show_menu
-str,def
-
-show_message_ext
-str,but1,but2,but3
 
 show_message
 str
@@ -2513,56 +2093,8 @@ x
 sin
 x
 
-sleep
-numb
-
-sound_3d_set_sound_cone
-snd,x,y,z,anglein,angleout,voloutside
-
-sound_3d_set_sound_distance
-snd,mindist,maxdist
-
-sound_3d_set_sound_position
-snd,x,y,z
-
-sound_3d_set_sound_velocity
-snd,x,y,z
-
-sound_add
-fname,kind,preload
-
-sound_background_tempo
-factor
-
 sound_delete
 index
-
-sound_discard
-index
-
-sound_effect_chorus
-snd,wetdry,depth,feedback,frequency,wave,delay,phase
-
-sound_effect_compressor
-snd,gain,attack,release,threshold,ratio,delay
-
-sound_effect_echo
-snd,wetdry,feedback,leftdelay,rightdelay,pandelay
-
-sound_effect_equalizer
-snd,center,bandwidth,gain
-
-sound_effect_flanger
-snd,wetdry,depth,feedback,frequency,wave,delay,phase
-
-sound_effect_gargle
-snd,rate,wave
-
-sound_effect_reverb
-snd,gain,mix,time,ratio
-
-sound_effect_set
-snd,effect
 
 sound_exists
 ind
@@ -2570,13 +2102,7 @@ ind
 sound_fade
 index,value,time
 
-sound_get_kind
-ind
-
 sound_get_name
-ind
-
-sound_get_preload
 ind
 
 sound_global_volume
@@ -2588,56 +2114,26 @@ index
 sound_loop
 index
 
-sound_pan
-index,value
-
 sound_play
 index
-
-sound_replace
-index,fname,kind,preload
-
-sound_restore
-index
-
-sound_set_search_directory
-dir
-
-sound_stop_all
-none
 
 sound_stop
 index
 
+sound_stop_all
+none
+
 sound_volume
 index,value
-
-splash_show_image
-fname,delay
-
-splash_show_text
-fname,delay
-
-splash_show_video
-fname,loop
-
-sprite_add_alpha
-fname,imgnumb,precise,preload,xorig,yorig
-
-sprite_add_from_screen
-ind,x,y,w,h
-
-sprite_add_from_surface
-ind,id,x,y,w,h
 
 sprite_add
 fname,imgnumb,precise,transparent,smooth,preload,xorig,yorig
 
+sprite_add_from_surface
+ind,id,x,y,w,h
+
 sprite_assign
 ind,spr
-
-sprite_create_from_screen
-x,y,w,h,precice
 
 sprite_create_from_surface
 id,x,y,w,h,p
@@ -2657,9 +2153,6 @@ ind
 sprite_get_bbox_left
 ind
 
-sprite_get_bbox_mode
-ind
-
 sprite_get_bbox_right
 ind
 
@@ -2675,20 +2168,8 @@ ind
 sprite_get_number
 ind
 
-sprite_get_precise
-ind
-
-sprite_get_preload
-ind
-
-sprite_get_smooth
-ind
-
 sprite_get_texture
 spr,subimg
-
-sprite_get_transparent
-ind
 
 sprite_get_width
 ind
@@ -2702,9 +2183,6 @@ ind
 sprite_merge
 ind1,ind2
 
-sprite_replace_alpha
-ind,fname,imgnumb,precise,preload,xorig,yorig
-
 sprite_replace
 ind,fname,imgnumb,precise,transparent,smooth,preload,xorig,yorig
 
@@ -2714,23 +2192,17 @@ ind,subimg,fname
 sprite_set_alpha_from_sprite
 ind,spr
 
-sprite_set_bbox_mode
-ind,mode
-
-sprite_set_bbox
-ind,left,top,right,bottom
-
 sprite_set_offset
 ind,xoff,yoff
 
-sprite_set_precise
-ind,mode
+sqr
+x
 
 sqrt
 x
 
-sqr
-x
+string
+val
 
 string_char_at
 str,index
@@ -2750,11 +2222,11 @@ str
 string_format
 val,tot,dec
 
-string_height_ext
-string,sep,w
-
 string_height
 string
+
+string_height_ext
+string,sep,w
 
 string_insert
 substr,str,index
@@ -2763,6 +2235,9 @@ string_length
 str
 
 string_letters
+str
+
+string_lettersdigits
 str
 
 string_lower
@@ -2774,29 +2249,29 @@ substr,str
 string_repeat
 str,count
 
-string_replace_all
+string_replace
 str,substr,newstr
 
-string_replace
+string_replace_all
 str,substr,newstr
 
 string_upper
 str
 
-string_width_ext
-string,sep,w
-
 string_width
 string
 
-string
-val
+string_width_ext
+string,sep,w
+
+surface_copy
+destination,x,y,source
 
 surface_copy_part
 destination,x,y,source,xs,ys,ws,hs
 
-surface_copy
-destination,x,y,source
+surface_create
+w,h
 
 surface_exists
 id
@@ -2804,23 +2279,35 @@ id
 surface_free
 id
 
-surface_getpixel
-id,x,y
-
 surface_get_height
+id
+
+surface_get_texture
 id
 
 surface_get_width
 id
 
+surface_getpixel
+id,x,y
+
+surface_getpixel_ext
+id,x,y
+
 surface_reset_target
 none
+
+surface_save
+id,fname
 
 surface_save_part
 id,fname,x,y,w,h
 
-surface_save
-id,fname
+surface_set_target
+id
+
+surface_set_target_ext
+index,id
 
 tan
 x
@@ -2831,17 +2318,11 @@ texid
 texture_get_width
 texid
 
-texture_preload
-texid
-
 texture_set_blending
 blend
 
 texture_set_interpolation
 linear
-
-texture_set_priority
-texid,prio
 
 texture_set_repeat
 repeat
@@ -2882,23 +2363,23 @@ id
 tile_get_width
 id
 
-tile_get_xscale
-id
-
 tile_get_x
 id
 
-tile_get_yscale
+tile_get_xscale
 id
 
 tile_get_y
 id
 
-tile_layer_delete_at
-depth,x,y
+tile_get_yscale
+id
 
 tile_layer_delete
 depth
+
+tile_layer_delete_at
+depth,x,y
 
 tile_layer_depth
 depth,newdepth
@@ -2930,8 +2411,8 @@ id,depth
 tile_set_position
 id,x,y
 
-tile_set_region S
-id,left,right,width,height S
+tile_set_region
+id,left,right,width,height
 
 tile_set_scale
 id,xscale,yscale
@@ -2951,61 +2432,10 @@ ind
 timeline_get_name
 ind
 
-timeline_moment_add
-ind,step,codestr
-
 timeline_moment_clear
 ind,step
 
-transition_define
-kind,name
-
-transition_exists
-kind
-
-variable_global_array2_get
-name,ind1,ind2
-
-variable_global_array2_set
-name,ind1,ind2,value
-
-variable_global_array_get
-name,ind
-
-variable_global_array_set
-name,ind,value
-
-variable_global_exists
-name
-
-variable_global_get
-name
-
-variable_global_set
-name,value
-
-variable_local_array2_get
-name,ind1,ind2
-
-variable_local_array_get
-name,ind
-
-variable_local_array_set
-name,ind,value
-
-variable_local_exists
-name
-
-variable_local_get
-name
-
-variable_local_set
-name,value
-
 window_center
-none
-
-window_default
 none
 
 window_get_caption
@@ -3021,30 +2451,6 @@ window_get_fullscreen
 none
 
 window_get_height
-none
-
-window_get_region_height
-none
-
-window_get_region_scale
-none
-
-window_get_region_width
-none
-
-window_get_showborder
-none
-
-window_get_showicons
-none
-
-window_get_sizeable
-none
-
-window_get_stayontop
-none
-
-window_get_visible
 none
 
 window_get_width
@@ -3086,38 +2492,8 @@ x,y
 window_set_rectangle
 x,y,w,h
 
-window_set_region_scale
-scale,adaptwindow
-
-window_set_region_size
-w,h,adaptwindow
-
-window_set_showborder
-show
-
-window_set_showicons
-show
-
-window_set_sizeable
-sizeable
-
 window_set_size
 w,h
-
-window_set_stayontop
-stay
-
-window_set_visible
-visible
-
-window_views_mouse_get_x
-none
-
-window_views_mouse_get_y
-none
-
-window_views_mouse_set
-x,y
 
 window_view_mouse_get_x
 id
@@ -3125,5 +2501,8 @@ id
 window_view_mouse_get_y
 id
 
-window_view_mouse_set
-id,x,y
+window_views_mouse_get_x
+none
+
+window_views_mouse_get_y
+none
