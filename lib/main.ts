@@ -71,13 +71,26 @@ class Provider{
             }
 
             this.allAutoCompleteData = this.allAutoCompleteData.concat(
-                                            data.toString()
-                                            .split(/\r\n|\n|\r/)
-                                            .map(x => ({
-                                                text: x,
-                                                type: "variable"
-                                            })))
+                data.toString()
+                .split(/\r\n|\n|\r/)
+                .map(x => ({
+                    text: x,
+                    type: "variable"
+                })))
         });
+		fs.readFile(path.resolve(__dirname, "..", "gml-constants"), (err, data) => {
+			if(data === undefined){
+				throw err;
+			}
+
+			this.allAutoCompleteData = this.allAutoCompleteData.concat(
+				data.toString()
+				.split(/\r\n|\n|\r/)
+				.map(x => ({
+					text: x,
+					type: "constant"
+				})))
+		});
 
         atom.workspace.observeTextEditors((editor: AtomCore.IEditor) => {
             var filePath = editor.getPath();
