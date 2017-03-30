@@ -94,7 +94,7 @@ class Provider{
 
         atom.workspace.observeTextEditors((editor: AtomCore.IEditor) => {
             var filePath = editor.getPath();
-            if(typeof filePath === "string" and GAMEMAKER_EXT.some(ext => path.extname(filePath) == ext)){
+            if(typeof filePath === "string" && GAMEMAKER_EXT.some(ext => path.extname(filePath) == ext)){
                 this.gmxFileManager.cacheGMXForFile(filePath)
             }
         });
